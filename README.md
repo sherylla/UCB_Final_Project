@@ -27,6 +27,10 @@
  2. Which physicochemical characteristic contributes to the high or low quality rating of the wine?
  
  
+ ## Google Drive Slides:
+ [UCB Final Project - Vinho Verde Wine](https://docs.google.com/presentation/d/1LI5SR6nxpghlIBBGXeISKfqNZb6SrDOhDTZI4r5Sb9U/edit#slide=id.p)
+ 
+ 
 ### Sources:
 
 UCI Machine Learning Repository
