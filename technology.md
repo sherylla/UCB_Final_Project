@@ -1,12 +1,17 @@
 # Technologies Used
 ## Data Cleaning and Analysis
-Pandas to clean the data and perform an exploratory analysis. Further analysis will be completed using Python.
+Pandas to clean the data and perform an exploratory analysis.
 
 ## Database Storage
-Postgres to store the data and integrate Flask and D3 to display the data.
+We are using AWS services to store our data. We created a schema in RDS that houses wine datasets. We are also storing raw csv file in AWS S3.
 
 ## Machine Learning
-Logistics Regression
+Datasets have been tested using the following algorithms:
+1. Logistic Regression
+2. PCA
+3. SMOTE
+4. Clustering
+5. Random Oversample/Undersampling
 
 ## Dashboard
-In addition to using a Flask template, we will also integrate D3.js for a fully functioning and interactive dashboard. It will be hosted on github pages
+For our dashboard, we will be using Tableau.
