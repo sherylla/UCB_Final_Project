@@ -1,4 +1,15 @@
-#Create Tables
+-- Create Tables
+
+-- Create Wine Type Table
+CREATE TABLE "Wine_Type" (
+    "wine type" int   NOT NULL,
+    "wine name" varchar   NOT NULL,
+    CONSTRAINT "pk_Wine_Type" PRIMARY KEY (
+        "wine type"
+     )
+);
+
+
 CREATE TABLE "Red_Wine_Quality" (
     "fixed_acidity" float   NOT NULL,
     "volatile_acidity" float   NOT NULL,
