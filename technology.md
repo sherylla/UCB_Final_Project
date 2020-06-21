@@ -14,4 +14,8 @@ Datasets have been tested using the following algorithms:
 5. Random Oversample/Undersampling
 
 ## Dashboard
-For our dashboard, we will be using Tableau.
+Technologies used to create Dashboard:
+- HTML
+- Javascript
+- D3
+- Plotly
