@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Vinho Verde Wine Analysis</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 jumbotron text-center" style="background-image: url(Images/background.png);background-repeat: no-repeat;background-position: center;position: relative;background-size: cover;">
+        <h2>Vinho Verde Wine Analysis Dashboard</h2>
+        <p>Use the interactive charts below to explore the dataset</p>
+        <hr class="my-4">
+        <p align="left">Vinho Verde is a region in northern Portugal. It is comprised of nine sub-regions bordered by the atlantic ocean, mountain ranges, and a river, which kept the region fairly wet and rainy. Vinho Verde is associated for producing wines that has a light fizz.
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <h3>Data Set Summary and Preliminary Analysis</h3>
+        <hr class="my-6">
+        <p>Our project analyzes two datasets related to red and white variants of the Portugese "Vino Verde" wine</p>
+        <p>Data has been sourced from the <a href="https://archive.ics.uci.edu/ml/datasets/wine+quality">UCI Machine Learning repository</a></p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <p>The inputs in the datasets were results from physicochemical tests to characterize the properties of the wine, and the output is based on the ratings from human wine testers.</p>
+      </div>
+      <div class="col-md-2">
+        <div class="well">
+          <h5>Wine Type:</h5>
+          <!-- <select id="selDataset"></select> -->
+          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Sample Record Count</h3>
+          </div>
+          <div id="sample-metadata" class="panel-body"></div>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div id="bar"></div>
+      </div>
+      <div class="col-md-5">
+        <div class="row">
+          <h4>White Wine Quality Attributes</h4>
+          <hr class="my-4">
+          <img src="Images/white_wine.png" width="480"/>
+          <br/>
+          <br/>
+        </div>
+        <div class="row">
+          <h4>Red Wine Quality Attributes</h4>
+          <hr class="my-4">
+          <img src="Images/red_wine.png" width="480"/>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <p><h4><b>Preliminary data analysis:</b></h4></p>
+      <div class="col-md-3">
+        <h5><b>Attribute data types</b></h5>
+        <img src="Images/dataattributetypes.png" width="200" height="200"/>
+      </div>
+      <div class="col-md-3">
+        <h5><b>Check for missing values</b></h5>
+        <img src="Images/missingvalues.png" width="200" height="200"/>
+      </div>
+      <div class="col-md-6">
+        <h5><b>Classifying all wines into two qualities: 0 (low quality), 1 (high quality)</b></h5>
+        <p>Classifying all wines with quality less than or equal to 5 as low quality
+           Classifying all wines with quality greater than 5 as high quality
+        </p>
+        <img src="Images/twowineclassification.png" width="400"/>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <h3>Machine Learning Model and Analysis</h3>
+        <hr class="my-6">
+        <p><h4><b>Questions we hope to answer:</b></h4>
+          <ul>
+            <li><b>How many input variables affect our data model</b></li>
+            <li><b>Based on a wine's attributes, can we predict it's rating</b></li>
+          </ul>
+        </p>
+        <div class="col-md-3">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Summary</h3>
+            </div>
+            <div class="panel-body">
+              <ul>
+                <li><b>Machine Learning Model:</b>Principal Component Analysis with Logistics Regression</li>
+                <li><b>Number of Components Selected for Analysis:</b> 9</li>
+                <li><b>Data split for training and testing: </b>Stratification methodology</li>
+                <li><b>Model Accuracy:</b> 73%</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-9">
+          <div class="row">
+            <div class="panel panel-primary">
+              <div class="panel-heading">
+                <h3 class="panel-title">PCA Analysis with Logistics Regression Model</h3>
+              </div>
+              <div class="panel-body">
+                <p>PCA analysis was conducted to find the most accurate model based on the number of components.
+                   Model was found to be most accurate with nine features.
+                   Logistics regression model was selected due to the binary outcome - quality wine or not. This model was found to provide the highest accuracy scores compared to random over/under sampling, SMOTE, SMOTEEN
+                </p>
+                <div class="col-md-5">
+                  <h5><b>Number of components versus accuracy chart</b></h5>
+                  <img src="Images/No of Components Accuracy.png" width="250" height="200"/>
+                </div>
+                <div class="col-md-4">
+                  <h5><b>Classification report</b></h5>
+                  <img src="Images/classificationreport_pcalogistics.png" width="250" height="200"/>
+                </div>
+              </div>
+              <div class="row">
+                <ul>Accuracy scores with:
+                  <li><b>SMOTE: </b>72%</li>
+                  <li><b>Random Over Sampler: </b>72%</li>
+                  <li><b>Random Under Sampler: </b>72%</li>
+                  <li><b>Cluster Centroid: </b>71.5%</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="plots.js"></script>
+
+</body>
+
+</html>
