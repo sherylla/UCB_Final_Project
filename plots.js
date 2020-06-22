@@ -73,39 +73,7 @@ for (var i=0;i<nested_data.length;i++) {
           };
 
           Plotly.newPlot('bar', barchartdata, barchartlayout);
-/* 
-          var nested_data1 = d3.nest()
-          .key(function(d) { return d.quality; }).sortKeys(d3.ascending)
-          .entries(data);
 
-          console.log(nested_data1);
-
-          var smp_values = metadata.filter(sampleObj => sampleObj.id == sample).map(sampleval => sampleval.sample_values);
-          smp_values = smp_values[0];
-          var oids = metadata.filter(sampleObj => sampleObj.id == sample).map(otuid => otuid.otu_ids);
-          oids = oids[0];
-          var olabels = metadata.filter(sampleObj => sampleObj.id == sample).map(otulabel => otulabel.otu_labels);
-          olabels = olabels[0];
-          var trace1 = {
-            x: oids,
-            y: smp_values,
-            mode: 'markers',
-            text: otu_labels,
-            marker: {
-              color: oids,
-              size: smp_values
-            }
-          };
-          
-          var bubblechartdata = [trace1];
-
-          var bubblechartlayout = {
-            title: 'Bubble Chart for Bacterial Species (OTUs)',
-            xaxis: {title: 'OTU ID'}
-          };
-          
-          Plotly.newPlot('bubble', bubblechartdata, bubblechartlayout);
-*/
     });
 } 
 
