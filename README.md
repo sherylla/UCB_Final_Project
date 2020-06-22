@@ -26,9 +26,18 @@
  1. Classify whether the wine is high or low quality
  2. Which physicochemical characteristic contributes to the high or low quality rating of the wine?
  
+ ## Database
+ [ERD](https://github.com/sherylla/UCB_Final_Project/blob/master/DB/Database_ERD.png)
+ 
+  - table join:
+    select wt.wine_name, wq.wine_code, wq.quality, wq.fixed_acidity, wq.volatile_acidity, wq.citric_acid, wq.residual_sugar, wq.chlorides, wq.free_sulfur_dioxide, wq.total_sulfur_dioxide, wq.density, wq.ph, wq.sulphates, wq.alcohol from "Wine_Quality" wq, "Wine_Type" wt where wq.wine_code = wt.wine_code 
+ 
  
  ## Google Drive Slides:
  [UCB Final Project - Vinho Verde Wine](https://docs.google.com/presentation/d/1LI5SR6nxpghlIBBGXeISKfqNZb6SrDOhDTZI4r5Sb9U/edit#slide=id.p)
+ 
+ ## Dashboard Link:
+ https://sherylla.github.io/UCB_Final_Project/
  
  
 ### Sources:
