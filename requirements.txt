@@ -1,1 +1,3 @@
 Requirements.txt
+
+Analyze ability to predict wine quality based on sample data collected for red and white wines
