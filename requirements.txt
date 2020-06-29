@@ -1,3 +1,7 @@
 Requirements.txt
 
-Analyze ability to predict wine quality based on sample data collected for red and white wines
+Analyze ability to predict wine quality based on sample data collected for red and white wines using Machine Learning techniques.
+Build a dashboard to showcase the analysis
+Setup database to store data with a minimum of two tables that can be joined
+Put together a presentation on the overall project
+Setup github repo and branches to collaborate on the work
